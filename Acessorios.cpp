@@ -28,10 +28,3 @@ void Acessorios::setCor(string cor){
 void Acessorios::setTipo(string tipo){
     this->tipo = tipo;
 }
-
-void Acessorios::MostrarNaTela(){
-  Produto::MostrarNaTela();
-  cout << "Tamanho do acessorio: " << tamanho << endl;
-  cout << "Cor do acessorio: " << cor << endl;
-  cout << "Material do acessorio: " << tipo << endl;
-}
