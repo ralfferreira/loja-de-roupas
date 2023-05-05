@@ -6,11 +6,14 @@
 
 Roupas::Roupas() : Produto(){}
 
-Roupas::Roupas(int ID, string nomeProduto, double valorDoProduto, string tamanho, string cor, string material) : Produto(ID, nomeProduto, valorDoProduto){
+Roupas::Roupas(string nomeProduto, double valorDoProduto, string tamanho, string cor, string material) : Produto(nomeProduto, valorDoProduto), tamanho(tamanho), cor(cor), material(material){
   this->tamanho = tamanho;
   this->cor = cor;
   this->material = material;
 }
+
+Roupas::~Roupas(){}
+
 string Roupas::getTamanho(){
   return tamanho;
 }
@@ -26,14 +29,4 @@ void Roupas::setTamanho(string tamanho){
 }
 void Roupas::setCor(string cor){
   this->cor = cor;
-}
-void Roupas::setMaterial(string material){
-    this->material = material;
-}
-
-void Roupas::MostrarNaTela(){
-  Produto::MostrarNaTela();
-  cout << "Tamanho do produto: " << tamanho << endl;
-  cout << "Cor do produto: " << cor << endl;
-  cout << "Material do produto: " << material << endl;
 }
