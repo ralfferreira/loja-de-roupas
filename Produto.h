@@ -4,24 +4,22 @@
 
 #include <iostream>
 #include <string>
-#include <iomanip>
+#pragma once
 
 using namespace std;
 
 class Produto{
-  protected:
-    int ID;
-    string nomeProduto;
-    double valorDoProduto;
+    protected:
+        string nomeProduto;
+        double valorDoProduto;
 
-  public:
-    Produto();
-    Produto(int ID, string nomeProduto, double valorDoProduto);
-    int getID();
-    string getNomeProduto();
-    double getValorDoProduto();
-    void setID(int ID);
-    void setNomeProduto(string nomeProduto);
-    void setValorDoProduto(double valorDoProduto);
-    virtual void MostrarNaTela();
+    public:
+        Produto();
+        virtual ~Produto();
+        Produto(string nomeProduto, double valorDoProduto);
+        string getNomeProduto();
+        double getValorDoProduto();
+        void setNomeProduto(string nomeProduto);
+        void setValorDoProduto(double valorDoProduto);
+        bool verificarEstoque();
 };
