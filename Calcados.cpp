@@ -2,13 +2,16 @@
 
 Calcados::Calcados() : Produto(){}
 
-Calcados::Calcados(int ID, string nomeProduto, double valorDoProduto, string tamanho, string cor, string tipo) : Produto(ID, nomeProduto, valorDoProduto){
-  this->tamanho = tamanho;
+Calcados::Calcados(string nomeProduto, double valorDoProduto, int tamanhoCalcado, string cor, string tipo) : Produto(nomeProduto, valorDoProduto), tamanhoCalcado(tamanhoCalcado), cor(cor), tipo(tipo){
+  this->tamanhoCalcado = tamanhoCalcado;
   this->cor = cor;
   this->tipo = tipo;
 }
-string Calcados::getTamanho(){
-  return tamanho;
+
+Calcados::~Calcados(){}
+
+int Calcados::getTamanho(){
+  return tamanhoCalcado;
 }
 string Calcados::getCor(){
   return cor;
@@ -16,20 +19,12 @@ string Calcados::getCor(){
 string Calcados::getTipo(){
   return tipo;
 }
-void Calcados::setTamanho(string tamanho){
-  this->tamanho = tamanho;
-
+void Calcados::setTamanho(int tamanhoCalcado){
+  this->tamanhoCalcado = tamanhoCalcado;
 }
 void Calcados::setCor(string cor){
   this->cor = cor;
 }
 void Calcados::setTipo(string tipo){
     this->tipo = tipo;
-}
-
-void Calcados::MostrarNaTela(){
-  Produto::MostrarNaTela();
-  cout << "Tamanho do produto: " << tamanho << endl;
-  cout << "Cor do produto: " << cor << endl;
-  cout << "Material do produto: " << tipo << endl;
 }

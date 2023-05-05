@@ -1,19 +1,24 @@
+//Autores: Anna Livia e Ralf Ferreira
+//Professores: Marcelo Iury e Derzu Omaia
+//Data de Entrega: 08 de maio de 2023
+
+#pragma once
 #include "Produto.h"
 
 class Calcados : public Produto{
-  private:
-    string tamanho;
-    string cor;
-    string tipo;
+    private:
+        int tamanhoCalcado;
+        string cor;
+        string tipo;
 
-  public:
-    Calcados();
-    Calcados(int ID, string nomeProduto, double valorDoProduto, string tamanho, string cor, string tipo);
-    string getTamanho();
-    string getCor();
-    string getTipo();
-    void setTamanho(string tamanho);
-    void setCor(string cor);
-    void setTipo(string tipo);
-    void MostrarNaTela();
+    public:
+        Calcados();
+        virtual ~Calcados();
+        Calcados(string nomeProduto, double valorDoProduto, int tamanhoCalcado, string cor, string tipo);
+        int getTamanho();
+        string getCor();
+        string getTipo();
+        void setTamanho(int tamanhoCalcado);
+        void setCor(string cor);
+        void setTipo(string tipo);
 };
