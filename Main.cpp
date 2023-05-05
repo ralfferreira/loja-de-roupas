@@ -67,13 +67,15 @@ int main() {
                             cout << "Digite o preço da roupa: R$ ";
                             cin >> preco;
                             cin.ignore();
+                            cout << "Digite o tipo de roupa: ";
+                            getline(cin, tipo);
                             cout << "Digite o tamanho da roupa: ";
                             getline(cin, tamanho);
                             cout << "Digite a cor da roupa: ";
                             getline(cin, cor);
                             cout << "Digite o material da roupa: ";
                             getline(cin, material);
-                            produtos.push_back(new Roupas(nome, preco, tamanho, cor, material));
+                            produtos.push_back(new Roupas(nome, preco, tamanho, cor, material, tipo));
                         }
                         break;
                     case 2:
@@ -93,7 +95,7 @@ int main() {
                             cin >> tamanhoCalcado;
                             cout << "Digite a cor do calçado: ";
                             getline(cin, cor);
-                            cout << "Digite o tipo de sapato: ";
+                            cout << "Digite o tipo de calçado: ";
                             getline(cin, tipo);
                             produtos.push_back(new Calcados(nome, preco, tamanhoCalcado, cor, tipo));
                         }
@@ -127,7 +129,7 @@ int main() {
 
             if (arquivoSaida.is_open()) {
                 for (auto produto : produtos) {
-                    arquivoSaida << produto->getNomeProduto() << "," << produto->getValorDoProduto() << endl;
+                    arquivoSaida << "Produto: " << produto->getNomeProduto() << "," << produto->getValorDoProduto() << endl;
                 }
                 arquivoSaida.close();
                 cout << "Produtos salvos com sucesso no arquivo Produtos.txt" << endl;

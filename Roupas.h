@@ -10,15 +10,18 @@ class Roupas : public Produto{
         string tamanho;
         string cor;
         string material;
+        string tipo;
 
     public:
         Roupas();
         virtual ~Roupas();
-        Roupas(string nomeProduto, double valorDoProduto, string tamanho, string cor, string material);
+        Roupas(string nomeProduto, double valorDoProduto, string tamanho, string cor, string material, string tipo);
         string getTamanho();
         string getCor();
         string getMaterial();
+        string getTipo();
         void setTamanho(string tamanho);
         void setCor(string cor);
         void setMaterial(string material);
+        void setTipo(string tipo);
 };
