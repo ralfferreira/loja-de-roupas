@@ -104,7 +104,6 @@ int main() {
                             double preco;
                             string tamanho;
                             string cor;
-                            string material;
                             string tipo;
                             cout << "Digite o nome do acessório: ";
                             getline(cin, nome);
