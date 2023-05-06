@@ -1,0 +1,3 @@
+1:Camiseta Nike,300,10,GG,Azul,Roupas,Camiseta,Poliester
+3:Cordao Ice,400,304,60cm,Amarelo,Acessorios,Cordao,Ouro
+4:Nike Blazer High,700,20,44,Preto,Calcados,Skate,

@@ -1,30 +1,15 @@
+// Autores: Anna Livia e Ralf Ferreira
+// Professores: Marcelo Iury e Derzu Omaia
+// Data de Entrega: 08 de maio de 2023
+
 #include "Calcados.h"
 
-Calcados::Calcados() : Produto(){}
+Calcados::Calcados() : Produto() {}
 
-Calcados::Calcados(string nomeProduto, double valorDoProduto, int tamanhoCalcado, string cor, string tipo) : Produto(nomeProduto, valorDoProduto), tamanhoCalcado(tamanhoCalcado), cor(cor), tipo(tipo){
-  this->tamanhoCalcado = tamanhoCalcado;
-  this->cor = cor;
-  this->tipo = tipo;
-}
+Calcados::Calcados(string nomeProduto, double valorDoProduto, int idProduto,
+                   int quantidadeDisponivel, string tamanhoProduto,
+                   string corProduto, string tipoProduto, string subTipoProduto)
+    : Produto(nomeProduto, valorDoProduto, idProduto, quantidadeDisponivel,
+              tamanhoProduto, corProduto, "Calcados", subTipoProduto) {}
 
-Calcados::~Calcados(){}
-
-int Calcados::getTamanho(){
-  return tamanhoCalcado;
-}
-string Calcados::getCor(){
-  return cor;
-}
-string Calcados::getTipo(){
-  return tipo;
-}
-void Calcados::setTamanho(int tamanhoCalcado){
-  this->tamanhoCalcado = tamanhoCalcado;
-}
-void Calcados::setCor(string cor){
-  this->cor = cor;
-}
-void Calcados::setTipo(string tipo){
-    this->tipo = tipo;
-}
+Calcados::~Calcados() {}

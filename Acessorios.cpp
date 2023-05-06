@@ -1,30 +1,22 @@
+// Autores: Anna Livia e Ralf Ferreira
+// Professores: Marcelo Iury e Derzu Omaia
+// Data de Entrega: 08 de maio de 2023
+
 #include "Acessorios.h"
 
-Acessorios::Acessorios() : Produto(){}
+Acessorios::Acessorios() : Produto() {}
 
-Acessorios::Acessorios(string nomeProduto, double valorDoProduto, string tamanho, string cor, string tipo) : Produto(nomeProduto, valorDoProduto), tamanho(tamanho), cor(cor), tipo(tipo){
-  this->tamanho = tamanho;
-  this->cor = cor;
-  this->tipo = tipo;
+Acessorios::Acessorios(string nomeProduto, double valorDoProduto, int idProduto,
+                       int quantidadeDisponivel, string tamanhoProduto,
+                       string corProduto, string material, string tipoProduto,
+                       string subTipoProduto)
+    : Produto(nomeProduto, valorDoProduto, idProduto, quantidadeDisponivel,
+              tamanhoProduto, corProduto, "Acessorios", subTipoProduto),
+      material(material) {
+  this->material = material;
 }
 
-Acessorios::~Acessorios(){}
+Acessorios::~Acessorios() {}
 
-string Acessorios::getTamanho(){
-  return tamanho;
-}
-string Acessorios::getCor(){
-  return cor;
-}
-string Acessorios::getTipo(){
-  return tipo;
-}
-void Acessorios::setTamanho(string tamanho){
-  this->tamanho = tamanho;
-}
-void Acessorios::setCor(string cor){
-  this->cor = cor;
-}
-void Acessorios::setTipo(string tipo){
-    this->tipo = tipo;
-}
+string Acessorios::getMaterial() { return material; }
+void Acessorios::setMaterial(string material) { this->material = material; }
